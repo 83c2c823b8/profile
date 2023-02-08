@@ -3,29 +3,30 @@
 <head><meta charset="utf-8">
   <title>mem-enkonduko</title>
   <style type="text/css">
-    <!--
-    body {
-      text-align       : center;
-      background-color : #ffffff;
-      margin           : 0px;
-      padding          : 0px;
-    }
-    #main {
-      width            : 800px;
-      margin-left      : auto;
-      margin-right     : auto;
-      text-align       : left;
-      background-color : #ffffff;
-      height           : 100%;
-      font-size        : 20px;
-    }
-    .under1 {
-  border-bottom: solid 1px #808080;
-}
-    </style>
-        <script type="text/javascript" async 
+      <!--
+      body {
+        text-align       : center;
+        background-color : #ffffff;
+        margin           : 0px;
+        padding          : 0px;
+      }
+      #main {
+        width            : 800px;
+        margin-left      : auto;
+        margin-right     : auto;
+        text-align       : left;
+        background-color : #ffffff;
+        height           : 100%;
+        font-size        : 20px;
+      }
+      .under1 {
+    border-bottom: solid 1px #808080;
+  }
+</style>
+    <script type="text/javascript" async 
             src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-        </script>
+    </script>
+
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         TeX: { equationNumbers: { autoNumber: "AMS" }},
@@ -38,6 +39,18 @@
         displayIndent: "2em"
       });
     </script>
+
+    <script>
+  function showClock1() {
+    let startDate = new Date('2001/7/5');
+    var nowTime = new Date();
+    let diff = nowTime.getTime() - startDate.getTime();
+    diff = Math.round((diff/(5.3912*(10**11)))*(10**12))/(10**12)
+    var msg = "post naskiĝo: " +  diff ;
+    document.getElementById("seigo").innerHTML = msg;
+}
+setInterval('showClock1()',1);
+    </script>
   <meta name="description" content="">
   </head>
   <div id = "main" >
@@ -46,12 +59,13 @@
     <img src="profilbildo.jpg" alt="profilbildo">
     <h2>Profilo</h2>
     <p>
-      alteco : $1.064 \times 10^{37}\ell_P$<br>
-      korpa pezo : $2.527 \times 10^{9}m_P$<br>
       Naskiĝloko：Sabae Fukui<br>
       hobio：Matematiko<br>
       Profesio：studento<br>
       poŝtadreso : 83c2c823b8  (bonvolu meti "@gmail.com")<br>
+      alteco : $1.064 \times 10^{37}\ell_P$<br>
+      korpa pezo : $2.527 \times 10^{9}m_P$<br>
+      <span id="seigo"></span>$\times 10^{55}t_P$<br>
     </p>
     <h2>Kariero</h2>
     07/05/2001: naskiĝo<br>
