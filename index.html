@@ -41,15 +41,22 @@
     </script>
 
     <script>
-  function showClock1() {
+    function set2fig(num) {
+   // 桁数が1桁だったら先頭に0を加えて2桁に調整する
+   var ret;
+   if( num < 10 ) { ret = "0" + num; }
+   else { ret = num; }
+   return ret;
+}
+  function seigo() {
     let startDate = new Date('2001/7/5');
     var nowTime = new Date();
     let diff = nowTime.getTime() - startDate.getTime();
-    diff = Math.round((diff/(5.3912*(10**11)))*(10**12))/(10**12)
+    diff = Math.round((diff/(5.391247*(10**11)))*(10**10))/(10**10)
     var msg = "post naskiĝo: " +  diff ;
     document.getElementById("seigo").innerHTML = msg;
 }
-setInterval('showClock1()',1);
+setInterval('seigo()',1);
     </script>
   <meta name="description" content="">
   </head>
