@@ -22,6 +22,10 @@
       .under1 {
     border-bottom: solid 1px #808080;
   }
+  .under2 {
+    border-bottom: solid 1px #808080;
+    width: 500px;
+  }
 </style>
     <script type="text/javascript" async 
             src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -42,7 +46,6 @@
 
     <script>
     function set2fig(num) {
-   // 桁数が1桁だったら先頭に0を加えて2桁に調整する
    var ret;
    if( num < 10 ) { ret = "0" + num; }
    else { ret = num; }
@@ -58,13 +61,14 @@
 }
 setInterval('seigo()',1);
     </script>
+
   <meta name="description" content="">
   </head>
   <div id = "main" >
   <body>
-    <h1><span class="under1">La memprezento de Yudai Yamamoto</span></h1>
+    <h1 class="under1"> memprezento de Yudai Yamamoto </h1>
     <img src="profilbildo.jpg" alt="profilbildo">
-    <h2>Profilo</h2>
+    <h2 class="under2">Profilo</h2>
     <p>
       Naskiĝloko：Sabae Fukui<br>
       hobio：Matematiko<br>
@@ -74,7 +78,7 @@ setInterval('seigo()',1);
       korpa pezo : $2.527 \times 10^{9}m_P$<br>
       <span id="seigo"></span>$\times 10^{52}t_P$<br>
     </p>
-    <h2>Kariero</h2>
+    <h2 class="under2">Kariero</h2>
     07/05/2001: naskiĝo<br>
     04/2004 : Yosie vartejo konfeso<br>
     03/2005 : Yosie vartejo forlaso<br>
@@ -89,7 +93,7 @@ setInterval('seigo()',1);
     03/2021 : Kanazawa universitato forlaso<br>
     04/2021 : Osaka universitato konfeso<br>
 
-    <h2>Kvalifiko</h2>
+    <h2 class="under2">Kvalifiko</h2>
     <ul>
       <li>unuaklasa amatora radiofunkciigisto</li>
       <li>Klaso 4 Hazardous Materials Handler</li>
