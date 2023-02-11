@@ -1,112 +1,80 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head><meta charset="utf-8">
-  <title>mem-enkonduko</title>
-  <style type="text/css">
-      <!--
-      body {
-        text-align       : center;
-        background-color : #ffffff;
-        margin           : 0px;
-        padding          : 0px;
-      }
-      #main {
-        width            : 800px;
-        margin-left      : auto;
-        margin-right     : auto;
-        text-align       : left;
-        background-color : #ffffff;
-        height           : 100%;
-        font-size        : 20px;
-      }
-      .under1 {
-    border-bottom: solid 1px #808080;
-  }
-  .under2 {
-    border-bottom: solid 1px #808080;
-    width: 500px;
-  }
-</style>
+<html>
+  <head>
     <script type="text/javascript" async 
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        TeX: { equationNumbers: { autoNumber: "AMS" }},
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-          processEscapes: true
-        },
-        "HTML-CSS": { matchFontHeight: false },
-        displayAlign: "left",
-        displayIndent: "2em"
-      });
-    </script>
-
-    <script>
-    function set2fig(num) {
-   var ret;
-   if( num < 10 ) { ret = "0" + num; }
-   else { ret = num; }
-   return ret;
-}
-  function seigo() {
-    let startDate = new Date('2001/7/5');
-    var nowTime = new Date();
-    let diff = nowTime.getTime() - startDate.getTime();
-    diff = Math.round((diff/(5.391247*(10**11)))*(10**10))/(10**10)
-    var msg = "post naskiĝo: " +  diff ;
-    document.getElementById("seigo").innerHTML = msg;
-}
-setInterval('seigo()',1);
-    </script>
-
-  <meta name="description" content="">
+    <link rel="stylesheet" href="set1.css" type="text/css">
   </head>
-  <div id = "main" >
-  <body>
-    <h1 class="under1"> memprezento de Yudai Yamamoto </h1>
-    <img src="profilbildo.jpg" alt="profilbildo">
-    <h2 class="under2">Profilo</h2>
-    <p>
-      Naskiĝloko：Sabae Fukui<br>
-      hobio：Matematiko<br>
-      Profesio：studento<br>
-      poŝtadreso : 83c2c823b8  (bonvolu meti "@gmail.com")<br>
-      alteco : $1.064 \times 10^{37}\ell_P$<br>
-      korpa pezo : $2.527 \times 10^{9}m_P$<br>
-      <span id="seigo"></span>$\times 10^{52}t_P$<br>
-    </p>
-    <h2 class="under2">Kariero</h2>
-    07/05/2001: naskiĝo<br>
-    04/2004 : Yosie vartejo konfeso<br>
-    03/2005 : Yosie vartejo forlaso<br>
-    04/2006 : Shimei infanĝardeno translokigo<br>
-    04/2008 : Toba bazlernejo konfeso<br>
-    03/2014 : Toba bazlernejo diplomiĝo<br>
-    04/2014 : Chuo Mezlernejo konfeso<br>
-    03/2017 : Chuo Mezlernejo diplomiĝo<br>
-    04/2017 : Fujishima mezlernejo konfeso<br>
-    03/2020 : Fujishima mezlernejo diplomiĝo<br>
-    04/2020 : Kanazawa universitato konfeso<br>
-    03/2021 : Kanazawa universitato forlaso<br>
-    04/2021 : Osaka universitato konfeso<br>
-
-    <h2 class="under2">Kvalifiko</h2>
-    <ul>
-      <li>unuaklasa amatora radiofunkciigisto</li>
-      <li>Klaso 4 Hazardous Materials Handler</li>
-      <li>Nivelo de Angla 2</li>
-      <li>Kanji Testa Nivelo 2</li>
-      <li>Naniwa Io ajn Osaka Testa Nivelo 3</li>
-      <li>Ordinara aŭtopermesilo</li>
-      <li>Ordinara motorciklo-licenco</li>
-    </ul>
-    <p>
-        
-    </p>
-    <a href="https://twitter.com/83c2c823b8?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @83c2c823b8</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </div>
-</body>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" }},
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { matchFontHeight: false },
+    displayAlign: "left",
+    displayIndent: "2em"
+  });
+</script>
 </html>
+
+<html lang="ja">
+  
+  <body>
+    <div class="tab-wrap">
+    <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-01">ZFC</label>
+      <div class="tab-content">
+      </div>
+   
+      <input id="TAB-02" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-02">集合論</label>
+      <div class="tab-content">
+    <div class="box3">
+      <span class="box-title">Axiom of Choice.</span>
+      <p>$\forall\lambda\in\Lambda , A_\lambda \neq \varnothing$とする．このとき，
+        <center>\(\displaystyle\prod_{\lambda\in\Lambda}A_\lambda\neq\varnothing\)</center>
+        以後，ACと略記する．
+      </p>  
+    </div>
+  
+    <div class="box2">
+      <span class="box-title">Def.</span>
+      <p>
+        <center>$X$:帰納的順序集合\(\overset{\text{def}}{\Longleftrightarrow}\)$X$の任意の全順序部分集合(鎖)が$X$に上界をもつ．</center>
+      </p>  
+    </div>
+
+    <div class="box1">
+      <span class="box-title">Zornの補題．</span>
+      <p>
+        <center> AC \(\Longleftrightarrow\)帰納的順序集合\(X\)に極大元が存在する．</center>
+      </p>  
+    </div>
+
+    <details id=proof> 
+      <summary>Proof.</summary>
+       
+    </details>
+      </div>
+
+      <input id="TAB-03" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-03">位相空間論</label>
+      <div class="tab-content">
+        <div class="box1">
+          <span class="box-title">Thm.</span>
+          <p>コンパクト集合に含まれる閉集合はコンパクトである．</p>
+        </div>
+        <details id=proof> 
+          <summary>Proof.</summary>
+            $B\subset A \subset X$．  $A$:コンパクト ， $B$:閉集合，とする．<br>
+            $B$の開被覆$\{U_{\lambda}\}_{\lambda\in\Lambda}$に対し，$\{U_{\lambda}\}_{\lambda\in\Lambda}\cup \{X\backslash B\}$は$A$ の開被覆<br>
+            $A$のコンパクト性より，
+            <center>
+              $A\subset \displaystyle\bigcup_{i=1}^n U_{\lambda_i} \cup (X\backslash B)$
+            </center>
+            $(X\backslash B) \cap B = \varnothing$なので，$B\subset \displaystyle\bigcup_{i=1}^n U_{\lambda_i}$
+            $\require{\AMScd}\require{\physics}$
+        </details>
+       
+      </div>
+  </body>
